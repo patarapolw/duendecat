@@ -1,4 +1,4 @@
-# README
+#README
 
 Made in Python3 and PyQt5
 
