@@ -7,7 +7,7 @@ from PyQt5.QtCore import *
 import sys, os
 from time import time
 
-import furigana
+from source import furigana
 from openpyxl import *
 from random import randint
 import random
@@ -282,7 +282,7 @@ if getattr(sys, 'frozen', False):
 
 logging.debug('CWD: ' + os.getcwd())
 logging.debug('Loading Excel')
-wb = load_workbook('duendecat.xlsx')
+wb = load_workbook(os.path.join('database','JLPT.xlsx'))
 logging.debug('Excel loaded\n')
 
 window.jlpt = jlpt
