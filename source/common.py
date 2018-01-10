@@ -1,4 +1,6 @@
 import sys, os
+from google_speech import Speech
+from threading import Thread
 
 from source import furigana
 from openpyxl import *
@@ -6,6 +8,7 @@ import os, sys
 from time import sleep
 from bs4 import BeautifulSoup
 import logging
+from random import choice
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -13,14 +16,33 @@ class Data():
 	def __init__(self, **param):
 		logging.debug(param)
 
-		if param['lang'] == 'cn':
+		self.reverse = param['is_reverse']
+		self.lang = param['lang']
+		self.is_speak = param['speak']
+
+		if self.lang == 'cn':
 			filename = 'HSK.xlsx'
 			self.character_type = 'Hanzi'
 		else:
 			filename = 'JLPT.xlsx'
 			self.character_type = 'Kanji'
 
-		self.sheet = param['sheet']
+		if getattr(sys, 'frozen', False):
+			application_path = os.path.dirname(sys.executable)
+			os.chdir(application_path)
+
+		logging.debug('CWD: ' + os.getcwd())
+		logging.debug('Loading Excel')
+		self.wb = load_workbook(os.path.join('database',filename))
+		logging.debug('Excel loaded\n')
+
+		if param['sheet'] == 'any':
+			self.sheet = choice(wb.get_sheet_names())
+		else:
+			self.sheet = param['sheet']
+		self.worksheet = self.wb[self.sheet]
+		self.max_row = self.worksheet.max_row
+
 		self.col = dict()
 		if self.sheet[0] == 'N':
 			self.col['lang'] = 'A'
@@ -63,19 +85,7 @@ class Data():
 			self.col['en'] = 'A'
 			self.col['grammar_point'] = 'SpoonFed Chinese sentences'
 			self.col['grammar_level'] = 'SpoonFed order: E'
-			self.col['kanji_level'] = 'F'
-
-		if getattr(sys, 'frozen', False):
-			application_path = os.path.dirname(sys.executable)
-			os.chdir(application_path)
-
-		logging.debug('CWD: ' + os.getcwd())
-		logging.debug('Loading Excel')
-		self.wb = load_workbook(os.path.join('database',filename))
-		logging.debug('Excel loaded\n')
-
-		self.worksheet = self.wb[self.sheet]
-		self.max_row = self.worksheet.max_row
+			self.col['kanji_level'] = 'E'
 
 	def getLangSen(self, row):
 		raw = self.worksheet[self.col['lang'] + str(row)].value
@@ -105,7 +115,8 @@ class Data():
 		output += [self.getReadingSen(row)]
 		output += [self.getEnSen(row)]
 		output += [self.getGrammar(row)]
-		output += [self.getLevel(row)]
+		if self.sheet != 'SpoonFed':
+			output += [self.getLevel(row)]
 
 		return '\n'.join(output)
 
@@ -114,18 +125,21 @@ class Data():
 		output += [self.getLangSen(row)]
 		output += [self.getReadingSen(row)]
 		output += [self.getGrammar(row)]
-		output += [self.getLevel(row)]
+		if self.sheet != 'SpoonFed':
+			output += [self.getLevel(row)]
 
 		return '\n'.join(output)
 
 	def formatGrammar(self, grammar, row):
+		logging.debug(grammar)
+		logging.debug(row)
 		if len(grammar) == 1:
 			grammar = self.worksheet[grammar + str(row)].value
 		else:
 			if ':' not in grammar:
 				pass
 			else:
-				grammar = grammar[:-1] + self.worksheet[grammar[-1] + str(row)].value
+				grammar = grammar[:-1] + str(self.worksheet[grammar[-1] + str(row)].value)
 
 		return grammar
 
@@ -138,12 +152,51 @@ class Data():
 		return first, last
 
 	def getMaxLevelRow(self, max_level):
+		if self.sheet == 'SpoonFed':
+			max_level = max_level * self.worksheet.max_row / 60
 		for row in range(2, self.worksheet.max_row):
 			level = self.worksheet[self.col['kanji_level'] + str(row)].value
 			if level > max_level:
 				return row-1
 
 		return row+1
+
+	def speak(self, sentence_type, row):
+		if not self.is_speak:
+			return
+		if self.reverse:
+			if sentence_type == 'top':
+				sentence_type = 'bottom'
+			else:
+				sentence_type = 'top'
+		if sentence_type == 'top':
+			self.sayLang(self.getLangSen(row))
+		else:
+			self.sayEn(self.getEnSen(row))
+
+	def sayLang(self, sentence):
+		say(sentence, self.lang)
+
+	def sayEn(self, sentence):
+		say(sentence, 'en')
+
+def say(sentence, lang):
+	if lang == 'en':
+		speaker = 'alex'
+	elif lang == 'jp':
+		lang = 'ja'
+		speaker = 'kyoko'
+	elif lang == 'cn':
+		lang = 'zh-CN'
+		speaker = 'ting-ting'
+
+	def myfunc():
+		#os.system('say -v {} "{}"'.format(speaker, sentence))
+		speech = Speech(sentence, lang)
+		speech.play(tuple())
+
+	t = Thread(target=myfunc)
+	t.start()
 
 def printAnything(anything):
 	sys.stdout.buffer.write((repr(anything) + '\n').encode('utf8'))

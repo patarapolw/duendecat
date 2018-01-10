@@ -103,6 +103,8 @@ class MainWindow(QMainWindow):
 		self.setGeometry(200,100,600,200)
 		self.show()
 
+		self.data.speak('top', self.row)
+
 	def on_key(self):
 		logging.debug(self.level_chooser.key)
 		if self.level_chooser.key == Qt.Key_Space:
@@ -129,12 +131,14 @@ class MainWindow(QMainWindow):
 	def showSentence(self):
 		if self.label_bottom.text() == 'Click to show translation.':
 			self.label_bottom.setText(self.bottom_sen)
+			self.data.speak('bottom', self.row)
 		else:
 			self.updateUI()
 
 	def updateUI(self):
 		self.top_sen, self.bottom_sen = self.getGuiData(self.param['level'])
 		self.label_top.setText(self.top_sen)
+		self.data.speak('top', self.row)
 		self.label_bottom.setText('Click to show translation.')
 		clickable(self.label_bottom).connect(self.showSentence)
 
@@ -148,8 +152,8 @@ class MainWindow(QMainWindow):
 
 	def getGuiData(self, level):
 		max_level_row = self.data.getMaxLevelRow(self.param['level'])
-		row = randint(2, max_level_row)
-		first, last = self.data.getData(row, self.param['is_reverse'])
+		self.row = randint(2, max_level_row)
+		first, last = self.data.getData(self.row, self.param['is_reverse'])
 
 		return first, last
 
