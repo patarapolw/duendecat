@@ -1,2 +1,2 @@
-nohup /Users/patarapolw/Documents/GitHub/duendecat/main.py --gui --level 2 &
-#/Users/patarapolw/Documents/GitHub/duendecat/main.py
+nohup $HOME/Documents/GitHub/duendecat/main.py --gui --level 2 &
+#$HOME/Documents/GitHub/duendecat/main.py
