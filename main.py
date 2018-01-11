@@ -21,11 +21,15 @@ parser.add_argument('--no-auto', help='Do not loop automatically', action='store
 parser.set_defaults(auto=True)
 parser.add_argument('--show-answer-lapse', help='Lapse in seconds to show answer', default=3, type=int)
 parser.add_argument('--new-question-lapse', help='Lapse in seconds to show new question', default=1, type=int)
+parser.add_argument('--speech-engine', help='Set speech engine. "google" for google_speech', default='not_set')
+
 
 #parser.print_help()
 arg = parser.parse_args()
 param = vars(arg)
 #print(arg)
+
+param['gui'] = True
 
 if param['sheet'] == 'default':
 	if param['lang'] == 'jp':

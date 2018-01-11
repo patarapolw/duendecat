@@ -19,6 +19,7 @@ class Data():
 		self.reverse = param['is_reverse']
 		self.lang = param['lang']
 		self.is_speak = param['speak']
+		self.speech_engine = param['speech_engine']
 
 		if self.lang == 'cn':
 			filename = 'HSK.xlsx'
@@ -194,9 +195,17 @@ class Data():
 		def myfunc():
 			self.is_speaking = True
 			
-			os.system('say -v {} "{}"'.format(speaker, sentence))
-			#speech = Speech(sentence, lang)
-			#speech.play(tuple())
+			if self.speech_engine == 'not_set':
+				if sys.platform == 'darwin':
+					self.speech_engine = 'mac'
+				else:
+					self.speech_engine == 'google'
+
+			if self.speech_engine == 'mac':
+				os.system('say -v {} "{}"'.format(speaker, sentence))
+			elif self.speech_engine == 'google':
+				speech = Speech(sentence, lang)
+				speech.play(tuple())
 
 			self.is_speaking = False
 
