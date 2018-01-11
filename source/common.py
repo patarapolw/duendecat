@@ -39,7 +39,7 @@ class Data():
 		logging.debug('Excel loaded\n')
 
 		if param['sheet'] == 'any':
-			self.sheet = choice(wb.get_sheet_names())
+			self.sheet = choice(self.wb.get_sheet_names())
 		else:
 			self.sheet = param['sheet']
 		self.worksheet = self.wb[self.sheet]

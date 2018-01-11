@@ -2,29 +2,39 @@
 from source import gui, cli
 import logging
 import argparse
+import json, sys, os
 logging.disable(logging.CRITICAL)
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--gui', help='Tag if GUI (default: CLI)', action='store_true')
-parser.add_argument('--lang', help='cn or jp (default: %(default)s)', default='cn')
-parser.add_argument('--level', help='Kanji/Hanzi level (default: %(default)s)', default=5, type=int)
-parser.add_argument('--sheet', help='Worksheet to read (default: %(default)s)', default='depends')
-parser.add_argument('--times', help='Number of times to repeat (CLI) (default: %(default)s)', default=60, type=int)
-parser.add_argument('--lang-first', help='Lang JP/CN before EN (default: reverse)', action='store_false', dest='is_reverse')
-parser.add_argument('--reverse', help='EN before Lang JP/CN (default: reverse)', action='store_true', dest='is_reverse')
-parser.set_defaults(is_reverse=True)
-parser.add_argument('--silent', help='No vocal output (default: speak)', action='store_false', dest='speak')
-parser.add_argument('--speak', help='Vocal output (default: speak)', action='store_true', dest='speak')
-parser.set_defaults(speak=True)
-parser.add_argument('--auto', help='Loop automatically (default: auto)', action='store_true', dest='auto')
-parser.add_argument('--no-auto', help='Do not loop automatically (default: auto)', action='store_false', dest='auto')
+
+parser.add_argument('--gui', help='Tag if GUI (default: %(default)s)', action='store_true')
+parser.add_argument('--cli', help='Tag if CLI', action='store_false')
+
+parser.add_argument('--lang', help='cn or jp (default: %(default)s)')
+parser.add_argument('--level', help='Kanji/Hanzi level (default: %(default)s)', type=int)
+parser.add_argument('--sheet', help='Worksheet to read (default: %(default)s)')
+parser.add_argument('--times', help='Number of times to repeat (CLI) (default: %(default)s)', type=int)
+
+parser.add_argument('--lang-first', help='Lang JP/CN before EN', action='store_false', dest='is_reverse')
+parser.add_argument('--reverse', help='EN before Lang JP/CN (default: %(default)s)', action='store_true', dest='is_reverse')
+
+parser.add_argument('--silent', help='No vocal output', action='store_false', dest='speak')
+parser.add_argument('--speak', help='Vocal output (default: %(default)s)', action='store_true', dest='speak')
+
 parser.set_defaults(auto=True)
-parser.add_argument('--show-answer-lapse', help='Lapse in seconds to show answer (default: %(default)s)', default=3, type=int)
-parser.add_argument('--new-question-lapse', help='Lapse in seconds to show new question (default: %(default)s)', default=1, type=int)
-parser.add_argument('--speech-engine', help='Set speech engine. "google" for google_speech (default: %(default)s)', default='not_set')
+parser.add_argument('--auto', help='Loop automatically (default: %(default)s)', action='store_true', dest='auto')
+parser.add_argument('--no-auto', help='Do not loop automatically', action='store_false', dest='auto')
 
+parser.add_argument('--show-answer-lapse', help='Lapse in seconds to show answer (default: %(default)s)', type=int)
+parser.add_argument('--new-question-lapse', help='Lapse in seconds to show new question (default: %(default)s)', type=int)
+parser.add_argument('--speech-engine', help='Set speech engine. "google" for google_speech (default: %(default)s)')
 
-#parser.print_help()
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
+with open('config.txt', 'r') as f:
+	default = json.load(f)
+
+parser.set_defaults(**default)
+parser.print_help()
 arg = parser.parse_args()
 param = vars(arg)
 #print(arg)

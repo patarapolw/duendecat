@@ -33,7 +33,7 @@ class MainWindow(QMainWindow):
 	def showUI(self):
 		self.was_speaking = time()
 		self.shown_sentence = False
-		self.options = self.data.wb.get_sheet_names()
+		self.options = self.data.wb.get_sheet_names() + ['any', 'depends']
 		option_box = QComboBox()
 		option_box.addItems(self.options)
 		option_box.setCurrentIndex(self.options.index(self.param['sheet']))
