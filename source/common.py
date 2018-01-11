@@ -27,9 +27,10 @@ class Data():
 			filename = 'JLPT.xlsx'
 			self.character_type = 'Kanji'
 
+		application_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 		if getattr(sys, 'frozen', False):
 			application_path = os.path.dirname(sys.executable)
-			os.chdir(application_path)
+		os.chdir(application_path)
 
 		logging.debug('CWD: ' + os.getcwd())
 		logging.debug('Loading Excel')
@@ -161,7 +162,7 @@ class Data():
 
 		return row+1
 
-	def speak(self, sentence_type, row):
+	def speak(self, sentence_type, row, sleep=False):
 		if not self.is_speak:
 			return
 		if self.reverse:
@@ -170,33 +171,40 @@ class Data():
 			else:
 				sentence_type = 'top'
 		if sentence_type == 'top':
-			self.sayLang(self.getLangSen(row))
+			self.sayLang(self.getLangSen(row), sleep)
 		else:
-			self.sayEn(self.getEnSen(row))
+			self.sayEn(self.getEnSen(row), sleep)
 
-	def sayLang(self, sentence):
-		say(sentence, self.lang)
+	def sayLang(self, sentence, sleep):
+		self.say(sentence, self.lang, sleep)
 
-	def sayEn(self, sentence):
-		say(sentence, 'en')
+	def sayEn(self, sentence, sleep):
+		self.say(sentence, 'en', sleep)
 
-def say(sentence, lang):
-	if lang == 'en':
-		speaker = 'alex'
-	elif lang == 'jp':
-		lang = 'ja'
-		speaker = 'kyoko'
-	elif lang == 'cn':
-		lang = 'zh-CN'
-		speaker = 'ting-ting'
+	def say(self, sentence, lang, sleep):
+		if lang == 'en':
+			speaker = 'alex'
+		elif lang == 'jp':
+			lang = 'ja'
+			speaker = 'kyoko'
+		elif lang == 'cn':
+			lang = 'zh-CN'
+			speaker = 'ting-ting'
 
-	def myfunc():
-		#os.system('say -v {} "{}"'.format(speaker, sentence))
-		speech = Speech(sentence, lang)
-		speech.play(tuple())
+		def myfunc():
+			self.is_speaking = True
+			
+			os.system('say -v {} "{}"'.format(speaker, sentence))
+			#speech = Speech(sentence, lang)
+			#speech.play(tuple())
 
-	t = Thread(target=myfunc)
-	t.start()
+			self.is_speaking = False
+
+		if not sleep:
+			t = Thread(target=myfunc)
+			t.start()
+		else:
+			myfunc()
 
 def printAnything(anything):
 	sys.stdout.buffer.write((repr(anything) + '\n').encode('utf8'))

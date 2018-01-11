@@ -1,18 +1,31 @@
 #! /Library/Frameworks/Python.framework/Versions/3.5/bin/python3
 from source import gui, cli
 import logging
+import argparse
 logging.disable(logging.CRITICAL)
 
-GUI = True
+parser = argparse.ArgumentParser()
+parser.add_argument('--gui', help='Tag if GUI', action='store_true')
+parser.add_argument('--lang', help='cn or jp', default='cn')
+parser.add_argument('--level', help='Kanji/Hanzi level', default=5, type=int)
+parser.add_argument('--sheet', help='Worksheet to read', default='depends')
+parser.add_argument('--times', help='Number of times to repeat (CLI)', default=60, type=int)
+parser.add_argument('--lang-first', help='Lang JP/CN before EN', action='store_false', dest='is_reverse')
+parser.add_argument('--reverse', help='EN before Lang JP/CN', action='store_true', dest='is_reverse')
+parser.set_defaults(is_reverse=True)
+parser.add_argument('--silent', help='No vocal output', action='store_false', dest='speak')
+parser.add_argument('--speak', help='Vocal output', action='store_true', dest='speak')
+parser.set_defaults(speak=True)
+parser.add_argument('--auto', help='Loop automatically', action='store_true', dest='auto')
+parser.add_argument('--no-auto', help='Do not loop automatically', action='store_false', dest='auto')
+parser.set_defaults(auto=True)
+parser.add_argument('--show-answer-lapse', help='Lapse in seconds to show answer', default=3, type=int)
+parser.add_argument('--new-question-lapse', help='Lapse in seconds to show new question', default=1, type=int)
 
-param = {
-	'lang': 'cn', # 'jp', 'cn'
-	'level': 5,
-	'sheet': 'depends', #'default', 'depends', 'any', any sheet names in the xlsx file
-	'times': 60,
-	'is_reverse': True,
-	'speak': True
-	}
+#parser.print_help()
+arg = parser.parse_args()
+param = vars(arg)
+#print(arg)
 
 if param['sheet'] == 'default':
 	if param['lang'] == 'jp':
@@ -45,7 +58,7 @@ elif param['sheet'] == 'depends':
 	elif param['lang'] == 'cn':
 		param['sheet'] = 'SpoonFed'
 
-if GUI:
+if param['gui']:
 	gui.load(**param)
 else:
 	cli.load(**param)

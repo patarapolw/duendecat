@@ -11,19 +11,21 @@ class load():
 
 		data = common.Data(**param)
 
-		self.is_reverse = param['is_reverse']
+		self.param = param
 
-		self.loopText(data, param['times'], data.getMaxLevelRow(param['level']))
+		self.loopText(data, self.param['times'], data.getMaxLevelRow(param['level']))
 
 	def loopText(self, data, times, max_level_row, speak=False):
 		for i in range(times):
 			row = randint(2, max_level_row)
-			first, last = data.getData(row, self.is_reverse)
+			first, last = data.getData(row, self.param['is_reverse'])
 
 			common.printText(first)
-			sleep(2)
+			data.speak('top', row, sleep=True)
+			sleep(self.param['show_answer_lapse'])
 
 			common.printText(last)
-			sleep(1)
+			data.speak('bottom', row, sleep=True)
+			sleep(self.param['new_question_lapse'])
 
 			print()

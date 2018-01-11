@@ -14,10 +14,10 @@ class load():
 		logging.debug(param)
 		logging.debug('Welcome to GUI')
 
-		data = common.Data(**param)
-
 		app = QApplication(sys.argv)
 		window = MainWindow()
+
+		data = common.Data(**param)
 
 		window.param = param
 		window.data = data
@@ -31,6 +31,8 @@ class MainWindow(QMainWindow):
 		self.setWindowTitle('Duendecat')
 
 	def showUI(self):
+		self.was_speaking = time()
+		self.shown_sentence = False
 		self.options = self.data.wb.get_sheet_names()
 		option_box = QComboBox()
 		option_box.addItems(self.options)
@@ -129,13 +131,15 @@ class MainWindow(QMainWindow):
 		self.updateUI()
 
 	def showSentence(self):
-		if self.label_bottom.text() == 'Click to show translation.':
+		if not self.shown_sentence:
 			self.label_bottom.setText(self.bottom_sen)
+			self.shown_sentence = True
 			self.data.speak('bottom', self.row)
 		else:
 			self.updateUI()
 
 	def updateUI(self):
+		self.shown_sentence = False
 		self.top_sen, self.bottom_sen = self.getGuiData(self.param['level'])
 		self.label_top.setText(self.top_sen)
 		self.data.speak('top', self.row)
@@ -161,6 +165,19 @@ class MainWindow(QMainWindow):
 		self.time = self.time.addSecs(1)
 		self.time_elapsed = 'Time elapsed: ' + self.time.toString("mm:ss")
 		self.statusBar.showMessage(self.statusBar.currentMessage()[:-len(self.time_elapsed)] + self.time_elapsed )
+
+		if self.data.is_speaking:
+			self.was_speaking = time()
+		else:
+			if not self.shown_sentence:
+				lapse = self.param['show_answer_lapse']
+			else:
+				lapse = self.param['new_question_lapse']
+			if self.was_speaking < time()-lapse:
+				self.showSentence()
+				self.was_speaking = time()
+			else:
+				pass
 
 def clickable(widget):
 	class Filter(QObject):
