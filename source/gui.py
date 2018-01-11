@@ -14,7 +14,7 @@ class load():
 		logging.debug(param)
 		logging.debug('Welcome to GUI')
 
-		app = QApplication(sys.argv)
+		app = QApplication(sys.argv[:1])
 		window = MainWindow()
 
 		data = common.Data(**param)
