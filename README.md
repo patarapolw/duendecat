@@ -17,7 +17,7 @@ Text-to-speech also implemented.
 
 Tested only on Mac
 
-Command-line arguments
+## Command-line arguments
 ```
 usage: main.py [-h] [--gui] [--lang LANG] [--level LEVEL] [--sheet SHEET]
                [--times TIMES] [--lang-first] [--reverse] [--silent] [--speak]
