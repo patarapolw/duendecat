@@ -21,7 +21,6 @@ parser.add_argument('--reverse', help='EN before Lang JP/CN (default: %(default)
 parser.add_argument('--silent', help='No vocal output', action='store_false', dest='speak')
 parser.add_argument('--speak', help='Vocal output (default: %(default)s)', action='store_true', dest='speak')
 
-parser.set_defaults(auto=True)
 parser.add_argument('--auto', help='Loop automatically (default: %(default)s)', action='store_true', dest='auto')
 parser.add_argument('--no-auto', help='Do not loop automatically', action='store_false', dest='auto')
 
@@ -37,9 +36,9 @@ parser.set_defaults(**default)
 parser.print_help()
 arg = parser.parse_args()
 param = vars(arg)
-#print(arg)
 
-#param['gui'] = True
+#param.update({ 'speak':False, 'auto':False })
+#print(param)
 
 if param['sheet'] == 'default':
 	if param['lang'] == 'jp':

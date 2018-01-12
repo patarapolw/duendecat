@@ -1,6 +1,7 @@
 #nohup $HOME/Documents/GitHub/duendecat/main.py --gui --level 99 --lang jp --sheet N3 --reverse &
-#nohup $HOME/Documents/GitHub/duendecat/main.py --gui --level 2 --lang cn --reverse &
-$HOME/Documents/GitHub/duendecat/main.py
+#nohup $HOME/Documents/GitHub/duendecat/main.py --gui --level 3 --lang cn --reverse &
+nohup $HOME/Documents/GitHub/duendecat/main.py --gui --level 3 --lang cn --lang-first --silent --no-auto &
+#$HOME/Documents/GitHub/duendecat/main.py
 #$HOME/Documents/GitHub/duendecat/main.py -h
 
 #usage: main.py [-h] [--gui] [--cli] [--lang LANG] [--level LEVEL]

@@ -166,18 +166,19 @@ class MainWindow(QMainWindow):
 		self.time_elapsed = 'Time elapsed: ' + self.time.toString("mm:ss")
 		self.statusBar.showMessage(self.statusBar.currentMessage()[:-len(self.time_elapsed)] + self.time_elapsed )
 
-		if self.data.is_speaking:
-			self.was_speaking = time()
-		else:
-			if not self.shown_sentence:
-				lapse = self.param['show_answer_lapse']
-			else:
-				lapse = self.param['new_question_lapse']
-			if self.was_speaking < time()-lapse:
-				self.showSentence()
+		if self.param['auto']:
+			if self.data.is_speaking:
 				self.was_speaking = time()
 			else:
-				pass
+				if not self.shown_sentence:
+					lapse = self.param['show_answer_lapse']
+				else:
+					lapse = self.param['new_question_lapse']
+				if self.was_speaking < time()-lapse:
+					self.showSentence()
+					self.was_speaking = time()
+				else:
+					pass
 
 def clickable(widget):
 	class Filter(QObject):

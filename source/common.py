@@ -19,6 +19,7 @@ class Data():
 		self.reverse = param['is_reverse']
 		self.lang = param['lang']
 		self.is_speak = param['speak']
+		self.is_speaking = False
 		self.speech_engine = param['speech_engine']
 
 		if self.lang == 'cn':
