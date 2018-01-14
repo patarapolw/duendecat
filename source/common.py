@@ -99,7 +99,7 @@ class Data():
 		return BeautifulSoup(raw, 'lxml').text
 
 	def getEnSen(self, row):
-		raw = self.worksheet[self.col['en'] + str(row)].value
+		raw = str(self.worksheet[self.col['en'] + str(row)].value)
 		return BeautifulSoup(raw, 'lxml').text
 
 	def getGrammar(self, row):

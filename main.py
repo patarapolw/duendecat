@@ -33,12 +33,13 @@ with open('config.txt', 'r') as f:
 	default = json.load(f)
 
 parser.set_defaults(**default)
-parser.print_help()
+#parser.print_help()
 arg = parser.parse_args()
 param = vars(arg)
 
-#param.update({ 'speak':False, 'auto':False })
-#print(param)
+# if len(sys.argv) == 1:
+# 	param.update({ 'lang':'cn', 'sheet': 'A1','speak':False, 'auto':False, 'level':3 })
+# print(param)
 
 if param['sheet'] == 'default':
 	if param['lang'] == 'jp':
