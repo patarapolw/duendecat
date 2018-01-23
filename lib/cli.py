@@ -1,4 +1,8 @@
-from source import common
+if __name__ == '__main__':
+    import common
+else:
+	from . import common
+
 from random import randint
 from time import time, sleep
 

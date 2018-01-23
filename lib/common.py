@@ -2,7 +2,7 @@ import sys, os
 from google_speech import Speech
 from threading import Thread
 
-from source import furigana
+from . import furigana
 from openpyxl import *
 import os, sys
 from time import sleep
@@ -16,18 +16,7 @@ class Data():
 	def __init__(self, **param):
 		logging.debug(param)
 
-		self.reverse = param['is_reverse']
-		self.lang = param['lang']
-		self.is_speak = param['speak']
-		self.is_speaking = False
-		self.speech_engine = param['speech_engine']
-
-		if self.lang == 'cn':
-			filename = 'HSK.xlsx'
-			self.character_type = 'Hanzi'
-		else:
-			filename = 'JLPT.xlsx'
-			self.character_type = 'Kanji'
+		self.setParam(**param)
 
 		application_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 		if getattr(sys, 'frozen', False):
@@ -36,7 +25,7 @@ class Data():
 
 		logging.debug('CWD: ' + os.getcwd())
 		logging.debug('Loading Excel')
-		self.wb = load_workbook(os.path.join('database',filename))
+		self.wb = load_workbook(os.path.join('database',self.filename))
 		logging.debug('Excel loaded\n')
 
 		if param['sheet'] == 'any':
@@ -152,6 +141,12 @@ class Data():
 		else:
 			first, last = self.getEnSen(row), self.getLatterPortionReversed(row)
 
+		with open('log.txt','a',encoding='utf8') as f:
+			f.write(first)
+			f.write('\n')
+			f.write(last)
+			f.write('\n\n')
+
 		return first, last
 
 	def getMaxLevelRow(self, max_level):
@@ -215,6 +210,20 @@ class Data():
 			t.start()
 		else:
 			myfunc()
+
+	def setParam(self, **param):
+		self.reverse = param['is_reverse']
+		self.lang = param['lang']
+		self.is_speak = param['speak']
+		self.is_speaking = False
+		self.speech_engine = param['speech_engine']
+
+		if self.lang == 'cn':
+			self.filename = 'HSK.xlsx'
+			self.character_type = 'Hanzi'
+		else:
+			self.filename = 'JLPT.xlsx'
+			self.character_type = 'Kanji'
 
 def printAnything(anything):
 	sys.stdout.buffer.write((repr(anything) + '\n').encode('utf8'))

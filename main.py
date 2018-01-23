@@ -1,5 +1,6 @@
 #! /Library/Frameworks/Python.framework/Versions/3.5/bin/python3
-from source import gui, cli
+from lib import cli
+from gui import top as gui
 import logging
 import argparse
 import json, sys, os
@@ -71,6 +72,8 @@ elif param['sheet'] == 'depends':
 		param['sheet'] = 'any'
 	elif param['lang'] == 'cn':
 		param['sheet'] = 'SpoonFed'
+
+#cli.load(**param)
 
 if param['gui']:
 	gui.load(**param)

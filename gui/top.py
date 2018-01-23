@@ -1,4 +1,5 @@
-from source import common
+from lib import common
+from . import *
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
@@ -9,26 +10,42 @@ from random import randint
 import logging
 from time import time
 
-class load():
-	def __init__(self, **param):
-		logging.debug(param)
-		logging.debug('Welcome to GUI')
+def load(**param):
+	logging.debug(param)
+	logging.debug('Welcome to GUI')
 
-		app = QApplication(sys.argv[:1])
-		window = MainWindow()
+	app = QApplication(sys.argv[:1])
+	global window, data
+	window = MainWindow()
 
-		data = common.Data(**param)
+	data = common.Data(**param)
 
-		window.param = param
-		window.data = data
-		window.showUI()
+	window.param = param
+	window.data = data
+	window.showUI()
 
-		app.exec_()
+	app.exec_()
+
+def getParam(**param):
+	window.param = param
+	data.setParam(**param)
 
 class MainWindow(QMainWindow):
 	def __init__(self, *args, **kwargs):
 		super(MainWindow, self).__init__(*args, **kwargs)
 		self.setWindowTitle('Duendecat')
+
+		menubar = self.menuBar()
+
+		settings = menubar.addMenu('&Settings')
+		pref = QAction('Preferences',self)
+		settings.triggered[QAction].connect(preferences.load)
+		settings.addAction(pref)
+
+		view = menubar.addMenu('&View')
+		logging = QAction('Log...',self)
+		view.triggered[QAction].connect(log.load)
+		view.addAction(logging)
 
 	def showUI(self):
 		self.was_speaking = time()
