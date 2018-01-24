@@ -145,3 +145,171 @@ Rin can read the Kanij that even Japanese people can’t.
 N3
 Kanji level 10
 
+今年も余すところ1週間だ
+今年[ことし]も余[あま]すところ1週間[しゅうかん]だ
+There is just one week left this year.
+Set10 vocab: 余す
+Vocab frequency: 24253
+Kanji level 20
+
+それは最新の学説ね。
+それは最新[さいしん]の学説[がくせつ]ね。
+It's the latest theory.
+Set10 vocab: 学説
+Vocab frequency: 13109
+Kanji level 17
+
+この字の字画は何画ですか
+この字[じ]の字画[じかく]は何[なん]画[かく]ですか
+How many strokes are there in this Chinese character?
+Set10 vocab: 字画
+Vocab frequency: 94553
+Kanji level 6
+
+そのチームは白とだいだい色のユニホームだ
+そのチームは白[しろ]とだいだい色[いろ]のユニホームだ
+The team's uniform is white and orange.
+Set10 vocab: 橙色
+Vocab frequency: 32138
+Kanji level 5
+
+学校は今週は休校です。
+学校[がっこう]は今週[こんしゅう]は休校[きゅうこう]です。
+School is closed this week.
+Set10 vocab: 休校
+Vocab frequency: 78259
+Kanji level 7
+
+お客様の要望を聞かせてください。
+お客様[きゃくさま]の要望[ようぼう]を聞[き]かせてください。
+What would you like to request?
+Set10 vocab: 要望
+Vocab frequency: 2329
+Kanji level 14
+
+体育館で器械を使って運動したの。
+体育館[たいいくかん]で器械[きかい]を使[つか]って運動[うんどう]したの。
+I did exercise with equipment in the gym.
+Set10 vocab: 器械
+Vocab frequency: 27173
+Kanji level 20
+
+いすを２階に運んでください。
+いすを２階[かい]に運[はこ]んでください。
+Please carry the chair to the second floor.
+Set10 vocab: 運ぶ
+Vocab frequency: 2079
+Kanji level 12
+
+信号が青に変わりました。
+信号[しんごう]が青[あお]に変[か]わりました。
+The traffic light turned green.
+Set10 vocab: 変わる
+Vocab frequency: 327
+Kanji level 15
+
+面会時間は午後 8時までです
+面会[めんかい]時間[じかん]は午後[ごご] 8時[じ]までです
+Visiting hours are until 8pm.
+Set10 vocab: 面会
+Vocab frequency: 10528
+Kanji level 16
+
+私がこの船の船長です。
+私[わたし]がこの船[ふね]の船長[せんちょう]です。
+I'm the captain of this ship.
+Set10 vocab: 船長
+Vocab frequency: 10468
+Kanji level 14
+
+表に人が来ています。
+表[おもて]に人[ひと]が来[き]ています。
+There's someone at the front door.
+Set10 vocab: 表
+Vocab frequency: 1205
+Kanji level 9
+
+骨折して指が変形してしまった
+骨折[こっせつ]して指[ゆび]が変形[へんけい]してしまった
+I broke my finger and it has become deformed.
+Set10 vocab: 変形
+Vocab frequency: 8061
+Kanji level 15
+
+親に言い付けたりしないで
+親[おや]に言い付[いいつ]けたりしないで
+Don't give orders to your parents.
+Set10 vocab: 言い付ける
+Vocab frequency: 55002
+Kanji level 10
+
+ダムの開発に住民は反対しています。
+ダムの開発[かいはつ]に住民[じゅうみん]は反対[はんたい]しています。
+The residents are against the dam development.
+Set10 vocab: 開発
+Vocab frequency: 334
+Kanji level 10
+
+火を弱めてください。
+火[ひ]を弱[よわ]めてください。
+Please turn down the heat.
+Set10 vocab: 弱める
+Vocab frequency: 27448
+Kanji level 7
+
+弟は体付きががっしりしてきた
+弟[おとうと]は体[からだ]付[つ]きががっしりしてきた
+My younger brother's physique has become muscular.
+Set10 vocab: 体付き
+Vocab frequency: 31269
+Kanji level 7
+
+１０年ぶりの大雪です。
+１０年[ねん]ぶりの大雪[おおゆき]です。
+We're having the heaviest snow in ten years.
+Set01 vocab: 大雪
+Vocab frequency: 11681
+Kanji level 7
+
+海老の天ぷらは私の好物です。
+海老[えび]の天[てん]ぷらは私[わたし]の好物[こうぶつ]です。
+Shrimp tempura is my favorite dish.
+Set01 vocab: 海老
+Vocab frequency: 12293
+Kanji level 14
+
+では、私たちは先に出発します。
+では、私[わたし]たちは先[さき]に出発[しゅっぱつ]します。
+We will leave before you then.
+Set01 vocab: 先に
+Vocab frequency: 14894
+Kanji level 14
+
+そのサイトでは新しい情報を毎日発信しています
+そのサイトでは新[あたら]しい情報[じょうほう]を毎日[まいにち]発信[はっしん]しています
+They send new information to the site every day.
+Set01 vocab: 発信
+Vocab frequency: 2640
+Kanji level 18
+
+The denominator of 2/3 is three.
+2/ 3の分母は3です
+2/ 3の分母[ぶんぼ]は3です
+Set01 vocab: 分母
+Vocab frequency: 97751
+Kanji level 3
+
+A Japan vs. the U.S. baseball game is on TV.
+テレビで日米野球をやっていますよ。
+テレビで日[にち]米[べい]野球[やきゅう]をやっていますよ。
+Set01 vocab: 日米
+Vocab frequency: 17929
+Kanji level 12
+
+何かお手伝いしましょうか。
+何[なに]かお手伝[てつだ]いしましょうか。
+Is there anything I can do to help?
+Set01 vocab: お手伝い
+Vocab frequency: 5573
+Kanji level 11
+

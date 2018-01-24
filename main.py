@@ -1,5 +1,5 @@
 #! /Library/Frameworks/Python.framework/Versions/3.5/bin/python3
-from lib import cli
+from common import cli
 from gui import top as gui
 import logging
 import argparse

@@ -6,7 +6,7 @@ if __name__ == '__main__':
 else:
 	from . import top
 
-from lib import common
+from common import common
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *

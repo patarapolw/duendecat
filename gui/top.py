@@ -1,4 +1,4 @@
-from lib import common
+from common import common
 from . import *
 
 from PyQt5.QtWidgets import *

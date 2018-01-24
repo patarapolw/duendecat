@@ -3,7 +3,7 @@ if __name__ == '__main__':
 	os.chdir('../')
 	sys.path.insert(0,'.')
 
-from lib import common
+from common import common
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
