@@ -1,1 +1,1 @@
-__all__ = ['preferences', 'log']
+__all__ = ['preferences', 'log', 'top']

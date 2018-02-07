@@ -313,3 +313,350 @@ Set01 vocab: お手伝い
 Vocab frequency: 5573
 Kanji level 11
 
+Where is the cell phone?
+手机在哪里？
+Shǒujī zài nǎli?
+SpoonFed Chinese sentences
+SpoonFed order: 346
+
+I spent a lot of money today.
+我今天花了很多钱。
+Wǒ jīntiān huāle hěn duō qián.
+SpoonFed Chinese sentences
+SpoonFed order: 155
+
+What would he like to do today?
+他今天想做什么？
+Tā jīntiān xiǎng zuò shénme?
+SpoonFed Chinese sentences
+SpoonFed order: 41
+
+Do you know his teacher?
+你认识他的老师吗？
+Nǐ rènshi tā de lǎoshī ma?
+SpoonFed Chinese sentences
+SpoonFed order: 235
+
+Other than me, there was no one there.
+那儿除了我，一个人都没有。
+nàr, chúle wǒ, yī gè rén dōu méiyǒu .
+SpoonFed Chinese sentences
+SpoonFed order: 426
+
+Let's go play.
+咱们去玩吧。
+Zánmen qù wánr ba.
+SpoonFed Chinese sentences
+SpoonFed order: 596
+
+She is our teacher.
+她是我们的老师。
+Tā shì wǒmen de lǎoshī.
+SpoonFed Chinese sentences
+SpoonFed order: 76
+
+I'm back.
+我回来了。
+Wǒ huílai le.
+SpoonFed Chinese sentences
+SpoonFed order: 156
+
+I want to know what this phrase/sentence means.
+我想知道这句话的意思。
+wǒ xiǎng zhīdào zhèjùhuà de yìsi .
+SpoonFed Chinese sentences
+SpoonFed order: 419
+
+This (exam/homework problem) is very difficult.
+这道题很难。
+Zhè dào tí hěn nán.
+SpoonFed Chinese sentences
+SpoonFed order: 407
+
+There's nothing I want to drink.
+我什么都不想喝。
+wǒ shénme dōu bù xiǎng hē .
+SpoonFed Chinese sentences
+SpoonFed order: 177
+
+This has no effect on him.
+这对他没有影响。
+zhè duì tā méiyǒu yǐngxiǎng .
+SpoonFed Chinese sentences
+SpoonFed order: 194
+
+Do you like your work?
+你喜欢你的工作吗？
+Nǐ xǐhuan nǐde gōngzuò ma?
+SpoonFed Chinese sentences
+SpoonFed order: 26
+
+He left home and went to school.
+他离开家去学校。
+Tā líkāi jiā qù xuéxiào. (also le)
+SpoonFed Chinese sentences
+SpoonFed order: 223
+
+He left home and went to school.
+他离开家去学校。
+Tā líkāi jiā qù xuéxiào. (also le)
+SpoonFed Chinese sentences
+SpoonFed order: 223
+
+The game is not over yet.
+比赛还没结束。
+Bǐsài hái méi jiéshù.
+SpoonFed Chinese sentences
+SpoonFed order: 550
+
+I have been studying English for four years.
+我学英语学了4年了。
+wǒ xué yīngyǔ xué le 4 nián le. (also no xuele)
+SpoonFed Chinese sentences
+SpoonFed order: 214
+
+The man sitting next to me spoke to me.
+坐在我旁边的男人跟我说话了。
+zuòzài wǒ pángbiān de nánrén gēn wǒ shuōhuà le .
+SpoonFed Chinese sentences
+SpoonFed order: 581
+
+When will you go to Hong Kong?
+你什么时候要去香港？
+Nǐ shénme shíhòu yào qù Xiānggǎng?
+SpoonFed Chinese sentences
+SpoonFed order: 583
+
+I'm reading an English book.
+我在看英文书。
+Wǒ zài kàn Yīngwén shū. (also du)
+SpoonFed Chinese sentences
+SpoonFed order: 305
+
+When will he go to university?
+他什么时候上大学？
+Tā shénme shíhòu shàng dàxué?
+SpoonFed Chinese sentences
+SpoonFed order: 190
+
+She hasn't heard this news yet.
+她还没听到这个消息。
+tā hái méi tīng dào zhè gè xiāoxi .
+SpoonFed Chinese sentences
+SpoonFed order: 552
+
+My address is…
+我的地址是……
+Wǒde dìzhǐ shì ……
+SpoonFed Chinese sentences
+SpoonFed order: 652
+
+She hasn't heard this news yet.
+她还没听到这个消息。
+tā hái méi tīng dào zhè gè xiāoxi .
+SpoonFed Chinese sentences
+SpoonFed order: 552
+
+Let's go.
+走吧。
+zǒu ba .
+SpoonFed Chinese sentences
+SpoonFed order: 102
+
+Where can I buy a cell phone?
+哪里可以买手机？
+Nǎli kěyǐ mǎi shǒujī?
+SpoonFed Chinese sentences
+SpoonFed order: 347
+
+For how long have you taught English?
+你教英语多长时间了？
+Nǐ jiāo Yīngyǔ duō cháng shíjiān le? (no ni duo chang...)
+SpoonFed Chinese sentences
+SpoonFed order: 660
+
+What do you do for work?
+你做什么工作？
+Nǐ zuò shénme gōngzuò?
+SpoonFed Chinese sentences
+SpoonFed order: 9
+
+As soon as she comes, we will begin.
+她一到，我们就开始。
+tā yī dào, wǒmen jiù kāishǐ .
+SpoonFed Chinese sentences
+SpoonFed order: 101
+
+Today, I made a new friend.
+今天我认识了一个新朋友。
+Jīntiān wǒ rènshi le yīge xīn péngyou.
+SpoonFed Chinese sentences
+SpoonFed order: 241
+
+Thank you!
+谢谢您。
+Xièxie nín.
+SpoonFed Chinese sentences
+SpoonFed order: 472
+
+余計なことを言ってはだめよ。
+余計[よけい]なことを言[い]ってはだめよ。
+Don't say any unnecessary things.
+Set09 vocab: 余計
+Vocab frequency: 3766
+Kanji level 20
+
+会議で重要な決定がありました。
+会議[かいぎ]で重要[じゅうよう]な決定[けってい]がありました。
+An important decision was made at the meeting.
+Set09 vocab: 決定
+Vocab frequency: 563
+Kanji level 20
+
+He told me when I should say yes.
+他告诉我什么时候该说是。
+tā gàosu wǒ shénme shíhou gāi shuō shì .
+SpoonFed Chinese sentences
+SpoonFed order: 148
+
+What do you think should be done about it?
+你觉得对此该做什么？
+nǐ juéde duìcǐ gāi zuò shénme ?
+SpoonFed Chinese sentences
+SpoonFed order: 174
+
+She has a lot of hobbies.
+她有很多爱好。
+Tā yǒu hěn duō àihào.
+SpoonFed Chinese sentences
+SpoonFed order: 292
+
+You must start at once.
+你必须马上开始。
+nǐ bìxū mǎshàng kāishǐ .
+SpoonFed Chinese sentences
+SpoonFed order: 370
+
+Did you guys understand what I mean?
+你们明白我的意思了吗？
+Nǐmen míngbai wǒ de yìsi le ma? (no le ok)
+SpoonFed Chinese sentences
+SpoonFed order: 421
+
+What study method do you use?
+你用什么方法学习？
+Nǐ yòng shénme fāngfǎ xuéxí?
+SpoonFed Chinese sentences
+SpoonFed order: 452
+
+My parents aren't old yet.
+我父母还不老。
+wǒ fùmǔ hái bù lǎo .
+SpoonFed Chinese sentences
+SpoonFed order: 577
+
+Mom works in a hospital.
+妈妈在医院工作。
+Māma zài yīyuàn gōngzuò.
+SpoonFed Chinese sentences
+SpoonFed order: 372
+
+He and I are the same height.
+他和我一样高。
+tā hé wǒ yīyàng gāo .
+SpoonFed Chinese sentences
+SpoonFed order: 224
+
+This is my son.
+这是我的儿子。
+Zhè shì wǒ de érzi.
+SpoonFed Chinese sentences
+SpoonFed order: 197
+
+Each of you say one sentence.
+一人说一句。
+Yī rén shuō yī jù.
+SpoonFed Chinese sentences
+SpoonFed order: 140
+
+There are only two people who know this matter.
+只有两个人知道这件事情。
+Zhǐ yǒu liǎngge rén zhīdào zhèjiàn shìqing.
+SpoonFed Chinese sentences
+SpoonFed order: 492
+
+When will your coworker come to China?
+你的同事什么时候来中国？
+Nǐde tóngshì shénme shíhòu lái Zhōngguó?
+SpoonFed Chinese sentences
+SpoonFed order: 572
+
+Here, snow is everywhere.
+这里全是雪。
+Zhèli quán shì xuě.
+SpoonFed Chinese sentences
+SpoonFed order: 630
+
+You appear to be really happy.
+你看起来很高兴。
+Nǐ kànqǐlái hěn gāoxìng.
+SpoonFed Chinese sentences
+SpoonFed order: 559
+
+I'll also introduce myself!
+我也来介绍一下!
+Wǒ yě lái jièshào yīxià!
+SpoonFed Chinese sentences
+SpoonFed order: 298
+
+He doesn't like his classmates.
+他不喜欢他的同学们。
+Tā bù xǐhuan tā de tóngxuémen.
+SpoonFed Chinese sentences
+SpoonFed order: 94
+
+I wish I lived near your house.
+我希望住在你家附近。
+wǒ xīwàng zhù zài nǐ jiā fùjìn.
+SpoonFed Chinese sentences
+SpoonFed order: 656
+
+May I ask a few questions?
+我能问一些问题吗？
+wǒ néng wèn yīxiē wèntí ma ?
+SpoonFed Chinese sentences
+SpoonFed order: 414
+
+I didn't know about this matter.
+我不知道这件事。
+Wǒ bù zhīdào zhè jiàn shì.
+SpoonFed Chinese sentences
+SpoonFed order: 395
+
+You speak English really well.
+你英语说得很好。
+Nǐ Yīngyǔ shuōde hěn hǎo.
+SpoonFed Chinese sentences
+SpoonFed order: 267
+
+こんな長い台詞、よく覚えられるわね。
+こんな長[なが]い台詞[だいし]、よく覚[おぼ]えられるわね。
+You remember these long speeches well.
+WaniKani vocab: 台詞
+Appears in context sentence level: 23
+Kanji level 19
+
+「どうして送別会に来なかったの。」「だって知らなかったのだもの。」
+doushite soubetsukai ni konakatta no. datte shiranakatta no da mono.
+“Why didn’t you go to the farewell party?” “Because I didn’t know.”
+もの
+N3
+Kanji level 11
+
+妹は歌が上手です。
+妹[いもうと]は歌[うた]が上手[じょうず]です。
+My little sister can sing well.
+Set03 vocab: 上手
+Vocab frequency: 2960
+Kanji level 10
+

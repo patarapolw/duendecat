@@ -80,7 +80,7 @@ class MainWindow(QWidget):
 		top.getParam(**param)
 
 def loadConfig():
-	with open('config.txt', 'r') as f:
+	with open(common.resource_path('config.txt'), 'r') as f:
 		param = json.load(f)
 
 	return param

@@ -18,14 +18,8 @@ class Data():
 
 		self.setParam(**param)
 
-		application_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-		if getattr(sys, 'frozen', False):
-			application_path = os.path.dirname(sys.executable)
-		os.chdir(application_path)
-
-		logging.debug('CWD: ' + os.getcwd())
 		logging.debug('Loading Excel')
-		self.wb = load_workbook(os.path.join('database',self.filename))
+		self.wb = load_workbook(resource_path(os.path.join('database',self.filename)))
 		logging.debug('Excel loaded\n')
 
 		if param['sheet'] == 'any':
@@ -230,3 +224,13 @@ def printAnything(anything):
 
 def printText(text):
 	sys.stdout.buffer.write((str(text) + '\n').encode('utf8'))
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.environ.get("_MEIPASS2",os.path.abspath("."))
+
+    return os.path.join(base_path, relative_path)

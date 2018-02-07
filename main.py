@@ -1,5 +1,5 @@
 #! /Library/Frameworks/Python.framework/Versions/3.5/bin/python3
-from common import cli
+from common import cli, common
 from gui import top as gui
 import logging
 import argparse
@@ -30,7 +30,7 @@ parser.add_argument('--new-question-lapse', help='Lapse in seconds to show new q
 parser.add_argument('--speech-engine', help='Set speech engine. "google" for google_speech (default: %(default)s)')
 
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
-with open('config.txt', 'r') as f:
+with open(common.resource_path('config.txt'), 'r') as f:
 	default = json.load(f)
 
 parser.set_defaults(**default)
