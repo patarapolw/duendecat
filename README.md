@@ -19,9 +19,13 @@ Tested only on Mac
 
 ## Build instructions
 
-* Mac: `python setup.py py2app`
+* Mac OSX: `python setup.py py2app`
 * Windows: `python setup.py py2exe`
 * Linux: `python setup.py install`
+
+## Executables
+
+* [Mac OSX](https://www.dropbox.com/sh/3u8z8fhjvhjblrx/AADuCE9GYROUMPMz3Pe0Ildsa?dl=0)
 
 ## Command-line arguments
 ```
