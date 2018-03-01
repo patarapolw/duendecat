@@ -17,6 +17,12 @@ Text-to-speech also implemented.
 
 Tested only on Mac
 
+## Build instructions
+
+* Mac: `python setup.py py2app`
+* Windows: `python setup.py py2exe`
+* Linux: `python setup.py install`
+
 ## Command-line arguments
 ```
 usage: main.py [-h] [--gui] [--cli] [--lang LANG] [--level LEVEL]
