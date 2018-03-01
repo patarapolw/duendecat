@@ -5,11 +5,14 @@ mainscript = 'duendecat.py'
 setup_requires = ['PyQt5', 'openpyxl==2.3.5', 'google_speech', 'bs4']
 
 if sys.platform == 'darwin':
-    setup_requires.append('py2app==0.13')
+    setup_requires.append('py2app')
     extra_options = dict(
         app=[mainscript],
         options=dict(py2app=dict(
-            argv_emulation=True
+            argv_emulation=True,
+            plist=dict(
+                CFBundleName='Duendecat',
+            )
         )),
     )
 elif sys.platform == 'win32':
@@ -24,9 +27,10 @@ else:
 
 setup(
     name='duendecat',
-    data_files=['duendecat/config.json',
-                'duendecat/database/HSK.xlsx', 'duendecat/database/JLPT.xlsx',
-                'duendecat/log.txt'],
+    data_files=[
+        ('duendecat', ['duendecat/config.json', 'duendecat/log.txt']),
+        ('duendecat/database', ['duendecat/database/HSK.xlsx', 'duendecat/database/JLPT.xlsx'])
+    ],
     setup_requires=setup_requires,
     **extra_options
 )

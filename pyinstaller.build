@@ -1,2 +1,0 @@
-# pyinstaller duendecat.py -w # for Windows
-pyinstaller duendecat.spec -w # for Mac OSX

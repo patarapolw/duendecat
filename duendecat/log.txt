@@ -103,3 +103,10 @@ Set08 vocab: 区別
 Vocab frequency: 3051
 Kanji level 15
 
+試験の前に英文を暗記したんだ。
+試験[しけん]の前[まえ]に英文[えいぶん]を暗記[あんき]したんだ。
+I memorized the English text before the exam.
+Set02 vocab: 暗記
+Vocab frequency: 9077
+Kanji level 18
+
