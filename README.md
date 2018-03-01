@@ -29,7 +29,7 @@ Tested only on Mac
 
 ## Command-line arguments
 ```
-usage: main.py [-h] [--gui] [--cli] [--lang LANG] [--level LEVEL]
+usage: duendecat.py [-h] [--gui] [--cli] [--lang LANG] [--level LEVEL]
                [--sheet SHEET] [--times TIMES] [--lang-first] [--reverse]
                [--silent] [--speak] [--auto] [--no-auto]
                [--show-answer-lapse SHOW_ANSWER_LAPSE]
