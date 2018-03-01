@@ -1,13 +1,13 @@
 {
+    "auto": true,
     "gui": true,
     "is_reverse": false,
-    "auto": true,
-    "speak": true,
     "lang": "jp",
-    "times": 60,
+    "level": 20,
     "new_question_lapse": 1,
     "sheet": "depends",
-    "level": 20,
+    "show_answer_lapse": 3,
+    "speak": true,
     "speech_engine": "not_set",
-    "show_answer_lapse": 3
+    "times": 60
 }
