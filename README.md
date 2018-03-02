@@ -17,9 +17,19 @@ Text-to-speech also implemented.
 
 Tested only on Mac
 
+## Build instructions
+
+* Mac OSX: `python setup.py py2app`
+* Windows: `python setup.py py2exe`
+* Linux: `python setup.py install`
+
+## Executables
+
+* [Mac OSX](https://www.dropbox.com/sh/3u8z8fhjvhjblrx/AADuCE9GYROUMPMz3Pe0Ildsa?dl=0)
+
 ## Command-line arguments
 ```
-usage: main.py [-h] [--gui] [--cli] [--lang LANG] [--level LEVEL]
+usage: duendecat.py [-h] [--gui] [--cli] [--lang LANG] [--level LEVEL]
                [--sheet SHEET] [--times TIMES] [--lang-first] [--reverse]
                [--silent] [--speak] [--auto] [--no-auto]
                [--show-answer-lapse SHOW_ANSWER_LAPSE]
