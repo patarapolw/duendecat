@@ -1,5 +1,4 @@
-from . import mainWindow
-
+from duendecat.gui import mainWindow
 from duendecat.dir import CONFIG_FILE
 
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QLabel, QCheckBox, QLineEdit, QPushButton

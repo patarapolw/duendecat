@@ -1,5 +1,5 @@
 from duendecat.reader import Data
-from . import preferences, log
+from duendecat.gui import preferences, log
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *

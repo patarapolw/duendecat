@@ -110,3 +110,80 @@ Set02 vocab: 暗記
 Vocab frequency: 9077
 Kanji level 18
 
+ジュリアン氏という人間はひじょうに変わっている人物らしい。
+jurianshi to iu ningen wa hijou ni kawatte iru jinbutsu rashii.
+This Mr. Julian must be a very different sort of gentleman.
+らしい
+N4
+Kanji level 15
+
+2/ 3の分母は3です
+2/ 3の分母[ぶんぼ]は3です
+The denominator of 2/3 is three.
+Set01 vocab: 分母
+Vocab frequency: 97751
+Kanji level 3
+
+こんな得体の知れないもの、食べられないよ。
+こんな得体[えたい]の知[し]れないもの、食[た]べられないよ。
+I can’t eat something so strange.
+WaniKani vocab: 得体
+Appears in context sentence level: 21
+Kanji level 19
+
+朝食に食パンを２枚食べました。
+朝食[ちょうしょく]に食[しょく]パンを２枚[まい]食[た]べました。
+I ate two slices of bread for breakfast.
+Set04 vocab: 食パン
+Vocab frequency: 45180
+Kanji level 18
+
+明日は会社の忘年会があります。
+明日[あした]は会社[かいしゃ]の忘年会[ぼうねんかい]があります。
+The company will have a year-end party tomorrow.
+Set07 vocab: 忘年会
+Vocab frequency: 10406
+Kanji level 18
+
+こいつはなんも悪さはしねえ。
+koitsu wa nan mo warusa wa shinee.
+There’s no harm in him.
+さ
+N4
+Kanji level 12
+
+急いでやり直します。
+急[いそ]いでやり直[なお]します。
+I'll do it over immediately.
+Set06 vocab: やり直す
+Vocab frequency: 11373
+Kanji level 16
+
+私たちの会社は今月は赤字よ。
+私[わたし]たちの会社[かいしゃ]は今月[こんげつ]は赤字[あかじ]よ。
+Our company is in deficit this month.
+Set06 vocab: 赤字
+Vocab frequency: 2817
+Kanji level 14
+
+小さな船が川を下っています。
+小[ちい]さな船[ふね]が川[かわ]を下[くだ]っています。
+A small ship is going down the river.
+Set02 vocab: 下る
+Vocab frequency: 5857
+Kanji level 7
+
+短い時間にずいぶん上達しましたね。
+短[みじか]い時間[じかん]にずいぶん上達[じょうたつ]しましたね。
+You've made a great deal of progress in a short time.
+Set04 vocab: 上達
+Vocab frequency: 7102
+Kanji level 18
+
+そのホテルで食中毒が発生したんだ。
+そのホテルで食[しょく]中毒[ちゅうどく]が発生[はっせい]したんだ。
+Food poisoning broke out at the hotel.
+Set01 vocab: 中毒
+Vocab frequency: 6867
+Kanji level 15
+

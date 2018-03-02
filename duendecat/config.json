@@ -4,6 +4,7 @@
     "is_reverse": false,
     "lang": "jp",
     "level": 20,
+    "log": false,
     "new_question_lapse": 1,
     "sheet": "depends",
     "show_answer_lapse": 3,
