@@ -187,3 +187,94 @@ Set01 vocab: 中毒
 Vocab frequency: 6867
 Kanji level 15
 
+京都には神社がたくさんある。
+京都[きょうと]には神社[じんじゃ]がたくさんある。
+There are many Shinto shrines in Kyoto.
+Set05 vocab: 神社
+Vocab frequency: 2883
+Kanji level 12
+
+全力で走れ。
+全力[ぜんりょく]で走[はし]れ。
+Run with all your might!
+Set05 vocab: 全力
+Vocab frequency: 5334
+Kanji level 6
+
+あなたの話は面白いね。
+あなたの話[はなし]は面白[おもしろ]いね。
+Your story's interesting.
+Set05 vocab: 話
+Vocab frequency: 119
+Kanji level 16
+
+私は電車で通学しています。
+私[わたし]は電車[でんしゃ]で通学[つうがく]しています。
+I go to school by train.
+Set05 vocab: 電車
+Vocab frequency: 1471
+Kanji level 14
+
+日本は地震が多いです。
+日本[にほん]は地震[じしん]が多[おお]いです。
+There are a lot of earthquakes in Japan.
+Set05 vocab: 地震
+Vocab frequency: 1709
+Kanji level 20
+
+学校で防火訓練がありました。
+学校[がっこう]で防火[ぼうか]訓練[くんれん]がありました。
+We had a fire drill at school.
+Set08 vocab: 防火
+Vocab frequency: 39767
+Kanji level 20
+
+改良されていたリンゴは、形のみならず味もよい。
+kairyou sarete ita ringo wa, katachi nominarazu aji mo yoi.
+The improved apples not only have good shape but also taste good.
+のみならず
+N2
+Kanji level 19
+
+妹はすぐに泣く。
+妹[いもうと]はすぐに泣[な]く。
+My little sister cries easily.
+Set07 vocab: 泣く
+Vocab frequency: 1783
+Kanji level 15
+
+私はもう決心を固めたの。
+私[わたし]はもう決心[けっしん]を固[かた]めたの。
+I've already made up my mind.
+Set07 vocab: 固める
+Vocab frequency: 5505
+Kanji level 14
+
+私は古い車が好きです。
+私[わたし]は古[ふる]い車[くるま]が好[す]きです。
+I like old cars.
+Set07 vocab: 古い
+Vocab frequency: 1249
+Kanji level 14
+
+ここから新宿駅まで歩いてどれぐらいかかりますか。
+koko kara shinjuku eki made aruite doregurai kakarimasu ka?
+How long does it take to walk from here to Shinjuku station?
+から
+N5
+Kanji level 13
+
+私にとって動物は身近な存在です。
+私[わたし]にとって動物[どうぶつ]は身近[みぢか]な存在[そんざい]です。
+I feel very close to animals.
+Set10 vocab: 身近
+Vocab frequency: 3219
+Kanji level 20
+
+高速の側道から本線に入った
+高速[こうそく]の側[そく]道[どう]から本線[ほんせん]に入[はい]った
+It joined the main line from the high-speed side road.
+Set10 vocab: 本線
+Vocab frequency: 50492
+Kanji level 17
+

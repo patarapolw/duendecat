@@ -33,6 +33,7 @@ setup(
         ('duendecat/database', ['duendecat/database/HSK.xlsx', 'duendecat/database/JLPT.xlsx'])
     ],
     setup_requires=setup_requires,
+    install_requires=setup_requires,
     entry_points={
         'console_scripts': [
             'duendecat = duendecat.__main__:main'

@@ -38,7 +38,6 @@ def cli():
 
     with open(CONFIG_FILE, 'r') as f:
         default = json.load(f)
-        default.pop('gui')
 
     parser.set_defaults(**default)
     arg = parser.parse_args()
