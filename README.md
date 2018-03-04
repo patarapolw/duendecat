@@ -37,17 +37,16 @@ $ duendecat
 
 ### Command-line arguments
 ```
-usage: duendecat.py [-h] [--gui] [--cli] [--lang LANG] [--level LEVEL]
-               [--sheet SHEET] [--times TIMES] [--lang-first] [--reverse]
-               [--silent] [--speak] [--auto] [--no-auto]
-               [--show-answer-lapse SHOW_ANSWER_LAPSE]
-               [--new-question-lapse NEW_QUESTION_LAPSE]
-               [--speech-engine SPEECH_ENGINE]
+usage: duendecat [-h] [--gui] [--lang LANG] [--level LEVEL] [--sheet SHEET]
+                 [--times TIMES] [--lang-first] [--reverse] [--silent]
+                 [--speak] [--auto] [--no-auto]
+                 [--show-answer-lapse SHOW_ANSWER_LAPSE]
+                 [--new-question-lapse NEW_QUESTION_LAPSE]
+                 [--speech-engine SPEECH_ENGINE] [--log]
 
 optional arguments:
   -h, --help            show this help message and exit
-  --gui                 Tag if GUI (default: True)
-  --cli                 Tag if CLI
+  --gui                 Invoke GUI mode
   --lang LANG           cn or jp (default: jp)
   --level LEVEL         Kanji/Hanzi level (default: 20)
   --sheet SHEET         Worksheet to read (default: depends)
@@ -65,4 +64,5 @@ optional arguments:
   --speech-engine SPEECH_ENGINE
                         Set speech engine. "google" for google_speech
                         (default: not_set)
+  --log                 Activate debugging mode (default: False)
 ```
