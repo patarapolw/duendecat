@@ -27,7 +27,15 @@ Tested only on Mac
 
 * [Mac OSX](https://www.dropbox.com/sh/3u8z8fhjvhjblrx/AADuCE9GYROUMPMz3Pe0Ildsa?dl=0)
 
-## Command-line arguments
+## Command line
+
+Duendecat can now be evoked from command line,
+
+```
+$ duendecat
+```
+
+### Command-line arguments
 ```
 usage: duendecat.py [-h] [--gui] [--cli] [--lang LANG] [--level LEVEL]
                [--sheet SHEET] [--times TIMES] [--lang-first] [--reverse]
