@@ -33,6 +33,7 @@ Duendecat can now be evoked from command line,
 
 ```
 $ duendecat
+$ duendecat-gui   # an equivalent of duendecat --gui
 ```
 
 ### Command-line arguments
