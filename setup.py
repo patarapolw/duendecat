@@ -1,8 +1,9 @@
 from setuptools import setup, find_packages
-import sys
+import sys, os
 
 mainscript = 'duendecat.py'
-setup_requires = ['PyQt5', 'openpyxl==2.3.5', 'google_speech', 'bs4']
+setup_requires = ['PyQt5', 'bs4']
+optional_requires = ['openpyxl==2.3.5', 'google_speech']
 
 if sys.platform == 'darwin':
     setup_requires.append('py2app')
@@ -30,7 +31,7 @@ setup(
     packages=find_packages(),
     data_files=[
         ('duendecat', ['duendecat/config.json', 'duendecat/log.txt']),
-        ('duendecat/database', ['duendecat/database/HSK.xlsx', 'duendecat/database/JLPT.xlsx'])
+        ('duendecat/database', [os.path.join('duendecat/database', file) for file in os.listdir('duendecat/database')])
     ],
     setup_requires=setup_requires,
     install_requires=setup_requires,

@@ -1,4 +1,5 @@
-from duendecat.reader import Data
+from duendecat.reader.sqlite import Data
+from duendecat.reader.xlsx import Data as Xlsx
 from duendecat.gui import preferences, log
 
 from PyQt5.QtWidgets import *
@@ -19,7 +20,10 @@ def load(**param):
     global window, data
     window = MainWindow()
 
-    data = Data(**param)
+    if '--xlsx' in sys.argv:
+        data = Xlsx(**param)
+    else:
+        data = Data(**param)
 
     window.param = param
     window.data = data
@@ -53,7 +57,10 @@ class MainWindow(QMainWindow):
     def showUI(self):
         self.was_speaking = time()
         self.shown_sentence = False
-        self.options = self.data.wb.sheetnames + ['any', 'depends']
+        if '--xlsx' in sys.argv:
+            self.options = self.data.wb.sheetnames + ['any', 'depends']
+        else:
+            self.options = self.data.table_names + ['any', 'depends']
         option_box = QComboBox()
         option_box.addItems(self.options)
         option_box.setCurrentIndex(self.options.index(self.param['sheet']))

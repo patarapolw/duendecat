@@ -1,5 +1,7 @@
 from __future__ import print_function
-from duendecat.reader import Data
+from duendecat.reader.sqlite import Data
+from duendecat.reader.xlsx import Data as Xlsx
+import sys
 
 from random import randint
 from time import sleep
@@ -12,7 +14,10 @@ class load():
         logging.debug(param)
         logging.debug('Welcome to CLI')
 
-        data = Data(**param)
+        if '--xlsx' in sys.argv:
+            data = Xlsx(**param)
+        else:
+            data = Data(**param)
 
         self.param = param
 

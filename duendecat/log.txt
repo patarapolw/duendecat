@@ -278,3 +278,136 @@ Set10 vocab: 本線
 Vocab frequency: 50492
 Kanji level 17
 
+私の話を落ち着いて聞いてください。
+私[わたし]の話[はなし]を落[お]ち着[つ]いて聞[き]いてください。
+Calm down and listen to me.
+Set05 vocab: 落ち着く
+Vocab frequency: 2314
+Kanji level 14
+
+このプールの深さは２メートルです。
+このプールの深[ふか]さは２メートルです。
+This pool is two meters deep.
+Set05 vocab: 深さ
+Vocab frequency: 16669
+Kanji level 12
+
+今朝は６時に目が覚めた。
+今朝[けさ]は６時[じ]に目[め]が覚[さ]めた。
+I woke up at six o'clock this morning.
+Set05 vocab: 覚める
+Vocab frequency: 5470
+Kanji level 17
+
+始発の電車に乗りました。
+始発[しはつ]の電車[でんしゃ]に乗[の]りました。
+I took the first train.
+Set05 vocab: 始発
+Vocab frequency: 38820
+Kanji level 9
+
+このプールの深さは２メートルです。
+このプールの深[ふか]さは２メートルです。
+This pool is two meters deep.
+Set05 vocab: 深さ
+Vocab frequency: 16669
+Kanji level 12
+
+テストを白紙で出したの。
+テストを白紙[はくし]で出[だ]したの。
+I handed in my test in blank.
+Set05 vocab: 白紙
+Vocab frequency: 11835
+Kanji level 7
+
+今日は上司と食事をする。
+今日[きょう]は上司[じょうし]と食事[しょくじ]をする。
+I'm eating with my boss today.
+Set05 vocab: 食事
+Vocab frequency: 1196
+Kanji level 15
+
+あそこの四つ角を左に曲がってください。
+あそこの四[よ]つ角[かど]を左[ひだり]に曲[ま]がってください。
+Please turn left at that crossroad up there.
+Set01 vocab: 四つ角
+Vocab frequency: 44301
+Kanji level 6
+
+今夜は月がとてもきれいです。
+今夜[こんや]は月[つき]がとてもきれいです。
+The moon looks so beautiful tonight.
+Set01 vocab: 月
+Vocab frequency: 45
+Kanji level 6
+
+歌合戦は赤組の勝ちでしたね。
+歌合戦[うたがっせん]は赤[あか]組[ぐみ]の勝[か]ちでしたね。
+The red team won the singing contest.
+Set01 vocab: 勝ち
+Vocab frequency: 3823
+Kanji level 11
+
+パトカーがバイクを追いかけてるぞ。
+パトカーがバイクを追[お]いかけてるぞ。
+A police car is chasing a motorcycle.
+Set01 vocab: 追い掛ける
+Vocab frequency: 37017
+Kanji level 11
+
+次の角で左に曲がってください。
+次[つぎ]の角[かど]で左[ひだり]に曲[ま]がってください。
+Please turn left at the next corner.
+Set01 vocab: 角
+Vocab frequency: 3229
+Kanji level 6
+
+アメリカと日本の生活のちがいをおしえて下さい。
+アメリカと日本[にっぽん]の生活[せいかつ]のちがいをおしえて下[くだ]さい。
+What is the difference between American and Japanese life?
+WaniKani vocab: 生活
+Appears in context sentence level: 6
+Kanji level 6
+
+病気になったので、しばらく会社を休むしかない。
+byouki ni natta node, shibaraku kaisha o yasumu shika nai.
+I’m sick so I have no choice but to take some time off work.
+しかない
+N3
+Kanji level 10
+
+会議には中国をはじめ、アジアの国々が参加した。
+kaigi wa chuugoku o hajime, ajia no kuniguni ga sanka shita.
+China and other Asian countries participated in the conference.
+をはじめ
+N3
+Kanji level 20
+
+心配事があるのかい？
+shinpai goto ga aru no kai.
+Anything worrying you?
+かい
+N4
+Kanji level 10
+
+生花を習いはじめて、もう半年経った。
+ikebana o narai hajimete, mou hantoshi tatta.
+It’s been half a year since I started learning flower arrangement.
+はじめる
+N4
+Kanji level 20
+
+姉はそれに気がつかなかった。
+ane wa sore ni ki ga tsukanakatta.
+My sister didn’t notice that.
+に気がつく
+N4
+Kanji level 6
+
+わたしは息子を買い物に行かせました。
+watashi wa musuko o kaimono ni ikasemashita.
+I make my son go shopping.
+させる
+N4
+Kanji level 12
+

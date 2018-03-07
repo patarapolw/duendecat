@@ -1,8 +1,7 @@
-import sys, os
 from google_speech import Speech
 from threading import Thread
 
-import os, sys
+import subprocess, sys
 from random import choice
 import sqlite3
 
@@ -17,40 +16,43 @@ class Data():
 
         if param['sheet'] == 'any':
             self.cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
-            self.table = choice(self.cursor.fetchall())
+            self.table_names = [table[0] for table in self.cursor.fetchall() if table[0] != 'sqlite_sequence']
+            self.table = choice(self.table_names)
         else:
             self.table = param['sheet']
-        self.max_row = self.worksheet.max_row
+
+        self.cursor.execute('SELECT COUNT(*) FROM {}'.format(self.table))
+        self.max_row = self.cursor.fetchone()[0]
 
     def getLangSen(self, row):
-        raw = self.worksheet[self.col['lang'] + str(row)].value
-        return furigana.kanji(BeautifulSoup(raw, 'html.parser').text)
+        self.cursor.execute('SELECT lang FROM {} WHERE id=?'.format(self.table), (row, ))
+        return self.cursor.fetchone()[0]
 
     def getReadingSen(self, row):
-        raw = self.worksheet[self.col['reading'] + str(row)].value
-        return BeautifulSoup(raw, 'html.parser').text
+        self.cursor.execute('SELECT reading FROM {} WHERE id=?'.format(self.table), (row,))
+        return self.cursor.fetchone()[0]
 
     def getEnSen(self, row):
-        raw = str(self.worksheet[self.col['en'] + str(row)].value)
-        return BeautifulSoup(raw, 'html.parser').text
+        self.cursor.execute('SELECT en FROM {} WHERE id=?'.format(self.table), (row,))
+        return self.cursor.fetchone()[0]
 
     def getGrammar(self, row):
-        grammar_point = self.formatGrammar(self.col['grammar_point'], row)
-        grammar_level = self.formatGrammar(self.col['grammar_level'], row)
+        self.cursor.execute('SELECT grammar_point, grammar_level FROM {} WHERE id=?'.format(self.table), (row,))
+        grammar_point , grammar_level = self.cursor.fetchone()
 
         raw = grammar_point + '\n' + grammar_level
-        return furigana.kanji(BeautifulSoup(raw, 'html.parser').text)
+        return raw
 
     def getLevel(self, row):
-        level = self.formatGrammar(self.col['kanji_level'], row)
-        return self.character_type + ' level ' + str(level)
+        self.cursor.execute('SELECT char_level FROM {} WHERE id=?'.format(self.table), (row,))
+        return self.character_type + ' level ' + self.cursor.fetchone()[0]
 
     def getLatterPortion(self, row):
         output = []
         output += [self.getReadingSen(row)]
         output += [self.getEnSen(row)]
         output += [self.getGrammar(row)]
-        if self.sheet != 'SpoonFed':
+        if self.table != 'SpoonFed':
             output += [self.getLevel(row)]
 
         return '\n'.join(output)
@@ -60,23 +62,10 @@ class Data():
         output += [self.getLangSen(row)]
         output += [self.getReadingSen(row)]
         output += [self.getGrammar(row)]
-        if self.sheet != 'SpoonFed':
+        if self.table != 'SpoonFed':
             output += [self.getLevel(row)]
 
         return '\n'.join(output)
-
-    def formatGrammar(self, grammar, row):
-        logging.debug(grammar)
-        logging.debug(row)
-        if len(grammar) == 1:
-            grammar = self.worksheet[grammar + str(row)].value
-        else:
-            if ':' not in grammar:
-                pass
-            else:
-                grammar = grammar[:-1] + str(self.worksheet[grammar[-1] + str(row)].value)
-
-        return grammar
 
     def getData(self, row, reverse=False):
         if not reverse:
@@ -93,14 +82,15 @@ class Data():
         return first, last
 
     def getMaxLevelRow(self, max_level):
-        if self.sheet == 'SpoonFed':
-            max_level = max_level * self.worksheet.max_row / 60
-        for row in range(2, self.worksheet.max_row):
-            level = self.worksheet[self.col['kanji_level'] + str(row)].value
-            if level > max_level:
+        if self.table == 'SpoonFed':
+            max_level = max_level * self.max_row / 60
+        for row in range(1, self.max_row):
+            self.cursor.execute('SELECT char_level FROM {} WHERE id=?'.format(self.table), (row,))
+            level = self.cursor.fetchone()[0]
+            if int(level) > max_level:
                 return row - 1
 
-        return row + 1
+        return self.max_row
 
     def speak(self, sentence_type, row, sleep=False):
         if not self.is_speak:
@@ -141,7 +131,7 @@ class Data():
                     self.speech_engine == 'google'
 
             if self.speech_engine == 'mac':
-                os.system('say -v {} "{}"'.format(speaker, sentence))
+                subprocess.call(['say', '-v', speaker, sentence])
             elif self.speech_engine == 'google':
                 speech = Speech(sentence, lang)
                 speech.play(tuple())
