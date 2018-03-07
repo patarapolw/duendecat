@@ -29,6 +29,10 @@ else:
 setup(
     name='duendecat',
     packages=find_packages(),
+    # package_data={
+    #     'duendecat': ['config.json', 'log.txt', 'database/*']
+    # },
+    # include_package_data=True,
     data_files=[
         ('duendecat', ['duendecat/config.json', 'duendecat/log.txt']),
         ('duendecat/database', [os.path.join('duendecat/database', file) for file in os.listdir('duendecat/database')])
